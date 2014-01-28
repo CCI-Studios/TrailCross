@@ -1,0 +1,1 @@
+<?php print views_embed_view('race_details', 'block', $node->nid); ?>

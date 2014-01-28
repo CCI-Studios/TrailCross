@@ -1,0 +1,1 @@
+<?php print views_embed_view('footage_video_node', 'block', $node->nid); ?>

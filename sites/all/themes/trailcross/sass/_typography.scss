@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'destroy';
+    src: url('../fonts/destroy/DESTROY-webfont.eot');
+    src: url('../fonts/destroy/DESTROY-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/destroy/DESTROY-webfont.woff') format('woff'),
+         url('../fonts/destroy/DESTROY-webfont.ttf') format('truetype'),
+         url('../fonts/destroy/DESTROY-webfont.svg#destroy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body,
+input,
+button,
+#partners h2
+{
+	font-family:'Open Sans', 'Verdana', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    font-weight:normal;
+}
+
+#block-block-1,
+#block-menu-menu-social-menu,
+#block-system-main-menu,
+#block-block-3 button,
+#block-menu-block-1,
+#page-title,
+#block-views-upcoming-races-block,
+#mobile-menu-btn, 
+h2,
+.button,
+.font-destroy
+{
+	font-family:'destroy', sans-serif;
+	font-weight:normal;
+	-webkit-font-smoothing:antialiased;
+	text-transform:uppercase;
+}

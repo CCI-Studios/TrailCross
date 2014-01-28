@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TrailCross feature.
+ */
+
+include_once 'trailcross.features.inc';
