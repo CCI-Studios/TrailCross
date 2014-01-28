@@ -56,6 +56,19 @@
 			}
 		}
 	}
+
+	.view-race-details
+	{
+		.views-field-field-image
+		{
+			display:none;
+		}
+
+		.views-field-title h2
+		{
+			line-height:120px;
+		}
+	}
 }
 
 
@@ -368,6 +381,11 @@
 				padding-left:0;
 			}
 		}
+
+		.views-field-field-image
+		{
+			display:none;
+		}
 	}
 
 	#page-title
@@ -481,7 +499,8 @@
 	.view-race-details,
 	.view-footage,
 	.view-footage-video-node,
-	.view-volunteer
+	.view-volunteer,
+	.view-news
 	{
 		h2 
 		{
