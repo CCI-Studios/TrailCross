@@ -3,6 +3,7 @@ description = TrailCross Custom
 core = 7.x
 
 scripts[] = js/mobile-menu.js
+scripts[] = js/placeholders.min.js
 scripts[] = js/jquery.textfill.min.js
 scripts[] = js/race-details-heading.js
 
