@@ -222,25 +222,37 @@ function trailcross_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['field_link_1']['id'] = 'field_link_1';
+  $handler->display->display_options['fields']['field_link_1']['table'] = 'field_data_field_link';
+  $handler->display->display_options['fields']['field_link_1']['field'] = 'field_link';
+  $handler->display->display_options['fields']['field_link_1']['label'] = '';
+  $handler->display->display_options['fields']['field_link_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_link_1']['element_label_colon'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['path'] = '[field_link_1]';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_image']['alter']['path'] = '[field_link_1]';
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
     'image_style' => 'large_highlight_image',
-    'image_link' => 'content',
+    'image_link' => '',
   );
   /* Field: Content: Subtitle */
   $handler->display->display_options['fields']['field_subtitle']['id'] = 'field_subtitle';
@@ -255,18 +267,17 @@ function trailcross_views_default_views() {
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  /* Field: Content: Path */
-  $handler->display->display_options['fields']['path']['id'] = 'path';
-  $handler->display->display_options['fields']['path']['table'] = 'node';
-  $handler->display->display_options['fields']['path']['field'] = 'path';
-  $handler->display->display_options['fields']['path']['label'] = '';
-  $handler->display->display_options['fields']['path']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['path']['alter']['text'] = 'View Highlight';
-  $handler->display->display_options['fields']['path']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['path']['alter']['path'] = '[path]';
-  $handler->display->display_options['fields']['path']['alter']['link_class'] = 'button';
-  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['path']['absolute'] = TRUE;
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
+  $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['label'] = '';
+  $handler->display->display_options['fields']['field_link']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['alter']['text'] = 'View Highlight';
+  $handler->display->display_options['fields']['field_link']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['alter']['path'] = '[field_link]';
+  $handler->display->display_options['fields']['field_link']['alter']['link_class'] = 'button';
+  $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -336,6 +347,7 @@ function trailcross_views_default_views() {
   $handler->display->display_options['fields']['field_image']['alter']['path'] = '[field_link]';
   $handler->display->display_options['fields']['field_image']['alter']['external'] = TRUE;
   $handler->display->display_options['fields']['field_image']['alter']['alt'] = '[title]';
+  $handler->display->display_options['fields']['field_image']['alter']['target'] = '_blank';
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
@@ -570,11 +582,25 @@ function trailcross_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Link to Map */
+  $handler->display->display_options['fields']['field_link_to_map']['id'] = 'field_link_to_map';
+  $handler->display->display_options['fields']['field_link_to_map']['table'] = 'field_data_field_link_to_map';
+  $handler->display->display_options['fields']['field_link_to_map']['field'] = 'field_link_to_map';
+  $handler->display->display_options['fields']['field_link_to_map']['label'] = '';
+  $handler->display->display_options['fields']['field_link_to_map']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_link_to_map']['alter']['text'] = 'View map';
+  $handler->display->display_options['fields']['field_link_to_map']['alter']['path'] = '[field_link_to-Map]';
+  $handler->display->display_options['fields']['field_link_to_map']['element_label_colon'] = FALSE;
   /* Field: Content: Location Description */
   $handler->display->display_options['fields']['field_location_description']['id'] = 'field_location_description';
   $handler->display->display_options['fields']['field_location_description']['table'] = 'field_data_field_location_description';
   $handler->display->display_options['fields']['field_location_description']['field'] = 'field_location_description';
   $handler->display->display_options['fields']['field_location_description']['label'] = 'Location';
+  $handler->display->display_options['fields']['field_location_description']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_location_description']['alter']['text'] = '<div>[field_location_description]</div>
+<div><a href="[field_link_to_map]" target="_blank">View map</a></div>';
+  $handler->display->display_options['fields']['field_location_description']['alter']['path'] = '[field_link_to_map]';
+  $handler->display->display_options['fields']['field_location_description']['alter']['target'] = '_blank';
   $handler->display->display_options['fields']['field_location_description']['element_label_type'] = 'h3';
   $handler->display->display_options['fields']['field_location_description']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_location_description']['element_wrapper_type'] = 'div';
@@ -760,6 +786,14 @@ function trailcross_views_default_views() {
   $handler->display->display_options['fields']['field_link_to_register']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_link_to_register']['alter']['text'] = '<a href=\'[field_link_to_register]\' class=\'button\' target=\'_blank\'>Register Now</a>';
   $handler->display->display_options['fields']['field_link_to_register']['element_label_colon'] = FALSE;
+  /* Field: Content: Link to Footage */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Content: Link to Footage';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a class="button" href="/footage">Race Footage</a>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Field: Content: Local Sponsors */
   $handler->display->display_options['fields']['field_local_sponsors']['id'] = 'field_local_sponsors';
   $handler->display->display_options['fields']['field_local_sponsors']['table'] = 'field_data_field_local_sponsors';
@@ -825,25 +859,37 @@ function trailcross_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['field_link_1']['id'] = 'field_link_1';
+  $handler->display->display_options['fields']['field_link_1']['table'] = 'field_data_field_link';
+  $handler->display->display_options['fields']['field_link_1']['field'] = 'field_link';
+  $handler->display->display_options['fields']['field_link_1']['label'] = '';
+  $handler->display->display_options['fields']['field_link_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_link_1']['element_label_colon'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['path'] = '[field_link_1]';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_image']['alter']['path'] = '[field_link_1]';
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
     'image_style' => 'small_highlight_image',
-    'image_link' => 'content',
+    'image_link' => '',
   );
   /* Field: Content: Subtitle */
   $handler->display->display_options['fields']['field_subtitle']['id'] = 'field_subtitle';
@@ -858,18 +904,17 @@ function trailcross_views_default_views() {
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  /* Field: Content: Path */
-  $handler->display->display_options['fields']['path']['id'] = 'path';
-  $handler->display->display_options['fields']['path']['table'] = 'node';
-  $handler->display->display_options['fields']['path']['field'] = 'path';
-  $handler->display->display_options['fields']['path']['label'] = '';
-  $handler->display->display_options['fields']['path']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['path']['alter']['text'] = 'View Highlight';
-  $handler->display->display_options['fields']['path']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['path']['alter']['path'] = '[path]';
-  $handler->display->display_options['fields']['path']['alter']['link_class'] = 'button';
-  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['path']['absolute'] = TRUE;
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
+  $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
+  $handler->display->display_options['fields']['field_link']['label'] = '';
+  $handler->display->display_options['fields']['field_link']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['alter']['text'] = 'View Highlight';
+  $handler->display->display_options['fields']['field_link']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['alter']['path'] = '[field_link]';
+  $handler->display->display_options['fields']['field_link']['alter']['link_class'] = 'button';
+  $handler->display->display_options['fields']['field_link']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -1062,7 +1107,7 @@ function trailcross_views_default_views() {
   $handler->display->display_options['fields']['field_link_to_volunteer']['field'] = 'field_link_to_volunteer';
   $handler->display->display_options['fields']['field_link_to_volunteer']['label'] = '';
   $handler->display->display_options['fields']['field_link_to_volunteer']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_link_to_volunteer']['alter']['text'] = '<a href="[field_link_to_volunteer]" class="button">Volunteer Now</a>';
+  $handler->display->display_options['fields']['field_link_to_volunteer']['alter']['text'] = '<a href="[field_link_to_volunteer]" class="button" target="_blank">Volunteer Now</a>';
   $handler->display->display_options['fields']['field_link_to_volunteer']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Date (field_date) */
   $handler->display->display_options['sorts']['field_date_value']['id'] = 'field_date_value';
