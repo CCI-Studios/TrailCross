@@ -55,18 +55,10 @@
 				text-align:center;
 			}
 		}
-	}
 
-	.view-race-details
-	{
-		.views-field-field-image
+		.views-field-path 
 		{
-			display:none;
-		}
-
-		.views-field-title h2
-		{
-			line-height:120px;
+			clear:left;
 		}
 	}
 }
@@ -121,17 +113,9 @@
 		}
 	}
 
-	#footer img.logo 
+	#footer .logo 
 	{
 		display:none;
-	}
-
-	.view-race-listings 
-	{
-		.views-field-path 
-		{
-			clear:left;
-		}
 	}
 
 	#footer2 #block-menu-block-1 ul li
@@ -142,6 +126,11 @@
 		{
 			margin-right:0;
 		}
+	}
+
+	#footer #block-block-3 
+	{
+		padding-left:0;
 	}
 }
 
@@ -264,11 +253,11 @@
 	#block-block-1,
 	#block-menu-menu-social-menu 
 	{
-		top:0;
+		top:5px;
 
 		h2 
 		{
-			display:none;
+			font-size:16px;
 		}
 	}
 	#block-block-1 .content a
@@ -363,6 +352,7 @@
 			min-height:120px;
 			background-size:90px auto;
 			background-position-y:5px;
+			clear:left;
 
 			h3,
 			.field-content 
@@ -372,19 +362,16 @@
 			}
 		}
 
-		.views-field-title
+		.views-field-title,
+		.views-field-field-image
 		{
 			min-height:0;
+			clear:none;
 
 			.field-content 
 			{
 				padding-left:0;
 			}
-		}
-
-		.views-field-field-image
-		{
-			display:none;
 		}
 	}
 
@@ -460,6 +447,15 @@
 		font-size:0.41em;
 	}
 
+	#block-block-1,
+	#block-menu-menu-social-menu 
+	{
+		h2 
+		{
+			display:none;
+		}
+	}
+
 	#footer #block-block-3
 	{
 		 input, button
@@ -517,6 +513,12 @@
 
 	.view-race-listings 
 	{
+		h2 
+		{
+			text-align:center;
+			padding-left:0;
+		}
+
 		.views-field-field-image
 		{
 			text-align:center;
@@ -534,7 +536,8 @@
 		}
 
 		.views-field-path,
-		.views-field-field-link-to-register
+		.views-field-field-link-to-register,
+		.views-field-nothing
 		{
 			text-align:center;
 			display:block;
@@ -550,10 +553,35 @@
 		}
 	}
 
+	.view-race-details
+	{
+		.views-field-field-image
+		{
+			display:none;
+		}
+
+		.views-field-title
+		{
+			float:none;
+
+			h2 
+			{
+				line-height:normal;
+				font-size:60px;
+			}
+		}
+	}
+
 	.view-volunteer .views-row 
 	{
-		padding-left:0;
 		background:none;
+		padding:30px 0;
+
+		.views-field-field-time,
+		.views-field-field-location
+		{
+			float:none;
+		}
 
 		.views-field-field-link-to-volunteer
 		{

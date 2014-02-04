@@ -1,6 +1,9 @@
 (function($) {
-	$(window).load(function(){
+	$(window).load(resize);
+	$(window).resize(resize);
 
+	function resize()
+	{
 		var leftMargin = 0;
 		if ($(".view-race-details .views-field-field-image").css("display") != "none")
 		{
@@ -13,5 +16,5 @@
 			innerTag:'h2',
 			maxFontPixels:100
 		});
-	});
+	}
 }(jQuery));

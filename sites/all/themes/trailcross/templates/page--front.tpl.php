@@ -127,7 +127,7 @@
     </div></div></div> <!-- /#main, /#main-wrapper -->
 
     <div id="footer"><div class="section"><div>
-      <img src="/sites/all/themes/trailcross/images/logo-alt.png" width="401" height="215" alt="TrailCross" class="logo" />
+      <a href="<?php print $front_page; ?>" class="logo"><img src="/sites/all/themes/trailcross/images/logo-alt.png" width="401" height="215" alt="TrailCross" /></a>
       <?php print render($page['footer']); ?>
     </div></div></div> <!-- /.section, /#footer -->
 
