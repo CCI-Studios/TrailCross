@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Sorts the null date races to the end
+ */
+
+function order_races_last_views_query_alter(&$view, &$query) {
+  if ($view->name == 'race_listings') {
+    array_unshift($query->orderby, array('field'=>'ISNULL(field_data_field_date_field_date_value)', 'direction'=>'ASC'));
+  }
+}

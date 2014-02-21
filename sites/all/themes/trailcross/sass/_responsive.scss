@@ -32,6 +32,12 @@
 			line-height:normal;
 			margin-bottom:20px;
 		}
+
+		.content 
+		{
+			float:none;
+			width:auto;
+		}
 	}
 
 	.view-race-listings
@@ -83,6 +89,20 @@
 				max-width:100%;
 				width:auto;
 				margin-bottom:5px;
+			}
+		}
+
+		.views-field-field-youtube-id
+		{
+			float:none;
+			margin-right:0;
+			text-align:center;
+
+			iframe,
+			img 
+			{
+				display:inline;
+				max-width:100%;
 			}
 		}
 
